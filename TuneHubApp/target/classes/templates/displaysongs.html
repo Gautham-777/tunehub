@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" href="styling.css">
+</head>
+<body>
+<ul class="topnav">
+  <li><a href="/login">home</a></li>
+  <li><a href="/map-viewsongs">View Songs</a></li>
+  <li style="border:solid white"><a href="/map-loginfail">Logout</a></li>
+  
+<form class="form-inline my-2 my-lg-0" th:action="@{/songs}" method="get">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="keyword">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+ </form>
+
+</ul>
+<style>
+
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  }
+
+.container{
+/*
+background-color:#FFA0A3;/*#FFA0A3*-baby pink*/
+background-image:url('https://c4.wallpaperflare.com/wallpaper/23/58/521/live-4-music-wallpaper-preview.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+margin-left:20%;
+margin-right:20%;
+margin-top:10%;
+margin-bottom:15%;
+position: absolute;
+justify-content:center;
+color:#FFFFFF;
+font-size:100%;
+padding-left:10%;
+padding-right:10%;
+padding-top:5%;
+padding-bottom:5%;
+
+
+}
+body{
+background-color:#7EC8E3;
+background-image:url('https://mcdn.wallpapersafari.com/medium/3/55/vWRepB.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+
+}
+</style> 
+
+<div class="container">
+<table border>
+<thead>
+	<tr>
+		<td>Name</td>
+		<td>Artist</td>
+		<td>Genre</td>
+		<td>Link</td>
+	</tr>
+</thead>
+<tbody>
+	<tr th:each="songslist :${songslist}">
+		<td th:text=${songslist.name}></td>
+		<td th:text=${songslist.artist}></td>
+		<td th:text=${songslist.genre}></td>
+		<td><audio controls><source th:src=${songslist.link} type="audio/mpeg"></audio>
+		</td>
+	</tr>
+</tbody>
+</table>
+</div>
+</body>
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="${pageContext.request.contextPath}">
+</head>
+<body>
+<ul class="topnav">
+  <li><a href="/map-register">Register</a></li>
+  <li><a href="/map-login">Login</a></li>
+  <li><a href=""></a></li>
+
+</ul>
+<style>
+
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  }
+
+.container{
+/*
+background-color:#FFA0A3;/*#FFA0A3*-baby pink*/
+background-image:url('https://c4.wallpaperflare.com/wallpaper/23/58/521/live-4-music-wallpaper-preview.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+margin-left:35%;
+margin-right:35%;
+margin-top:15%;
+margin-bottom:15%;
+position: absolute;
+justify-content:center;
+color:#FFFFFF;
+font-size:100%;
+padding-left:10%;
+padding-right:10%;
+padding-top:5%;
+padding-bottom:5%;
+
+
+}
+body{
+background-color:#7EC8E3;
+background-image:url('https://mcdn.wallpapersafari.com/medium/3/55/vWRepB.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+
+}
+</style> 
+
+<div class="container">
+<form action="/login" method="post">
+
+<label>Email ID:</label>
+<input type="email" name="email"/>
+<br/><br/>
+<label>Password:</label>
+<input type="password" name="password"/>
+<br/><br/>
+
+<input type="submit" value="LOGIN"/>
+
+</form>
+</div>
+</body>
+</html>

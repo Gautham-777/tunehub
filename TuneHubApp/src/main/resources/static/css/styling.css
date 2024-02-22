@@ -1,0 +1,55 @@
+body {margin: 0;}
+
+ul.topnav {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+ul.topnav li {float: left;}
+
+ul.topnav li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+ul.topnav li a:hover:not(.active) {background-color: #111;}
+
+ul.topnav li a.active {background-color: #04AA6D;}
+
+ul.topnav li.right {float: right;}
+
+@media screen and (max-width: 600px) {
+  ul.topnav li.right, 
+  ul.topnav li {float: none;}
+  }
+
+.container{
+/*
+background-color:#FFA0A3;/*#FFA0A3*-baby pink*/
+background-image:url('https://thumbs.dreamstime.com/z/abstract-music-notes-blast-blurry-grungy-light-pink-background-illustration-music-notes-radial-blast-effect-blurred-156532164.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+margin-left:35%;
+margin-right:35%;
+margin-top:20%;
+margin-bottom:20%;
+position: absolute;
+justify-content:center;
+color:#4E1A3D;
+font-size:100%;
+
+
+}
+body{
+background-color:#7EC8E3;
+background-image:url('https://t4.ftcdn.net/jpg/00/16/46/97/360_F_16469749_ql8mYL0ji6D5FIFn4pBYs3a6QCiJ0Fth.jpg');
+background-repeat:no-repeat;
+background-size: cover;
+
+}
